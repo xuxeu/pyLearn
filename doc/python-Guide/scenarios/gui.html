@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GUI应用 &mdash; The Hitchhiker&#39;s Guide to Python</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="The Hitchhiker&#39;s Guide to Python" href="../index.html" />
+    <link rel="next" title="数据库" href="db.html" />
+    <link rel="prev" title="命令行应用" href="cli.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gui">
+<h1>GUI应用<a class="headerlink" href="#gui" title="Permalink to this headline">¶</a></h1>
+<img alt="https://farm5.staticflickr.com/4250/33907143624_cd621b535c_k_d.jpg" src="https://farm5.staticflickr.com/4250/33907143624_cd621b535c_k_d.jpg" />
+<p>以下GUI应用按字母顺序排列。</p>
+<div class="section" id="camelot">
+<h2>Camelot<a class="headerlink" href="#camelot" title="Permalink to this headline">¶</a></h2>
+<p>除了Python，SQLAlchemy和Qt之外，<a class="reference external" href="http://www.python-camelot.com">Camelot</a>
+提供构建应用的组件。它的灵感取决于Django的管理接口。</p>
+<p>如下是主要的信息资源网站: <a class="reference external" href="http://www.python-camelot.com">http://www.python-camelot.com</a>
+，邮件列表网站： <a class="reference external" href="http://groups.google.com/forum/#!forum/project-camelot">http://groups.google.com/forum/#!forum/project-camelot</a></p>
+</div>
+<div class="section" id="cocoa">
+<h2>Cocoa<a class="headerlink" href="#cocoa" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cocoa框架仅在OS X中可用。如果您正在写一个跨平台的应用，不要选用这个!</p>
+</div>
+</div>
+<div class="section" id="gtk">
+<h2>GTk<a class="headerlink" href="#gtk" title="Permalink to this headline">¶</a></h2>
+<p>PyGTK提供GTK+工具包的Python绑定。和GTK+库一样，PyGTK当前由GNU LGPL授权。
+PyGTK当前只支持Gtk-2.X的API（Gtk-3.0不支持）。值得一提的是，PyGTK不适用于新项目，
+而已经存在的应用不能从PyGTK移植到PyGObject。</p>
+</div>
+<div class="section" id="pygobject-aka-pygi">
+<h2>PyGObject aka (PyGi)<a class="headerlink" href="#pygobject-aka-pygi" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://wiki.gnome.org/Projects/PyGObject">PyGObject</a> 提供了Python绑定，可以访问整个GNOME软件平台。
+它完全兼容GTK+ 3。使用“Python GTK+ 3 教程”（<a class="reference external" href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/">https://python-gtk-3-tutorial.readthedocs.io/en/latest/</a>&gt;`_）
+来开始学习。</p>
+<p><a class="reference external" href="http://lazka.github.io/pgi-docs/">API 参考</a></p>
+</div>
+<div class="section" id="kivy">
+<h2>Kivy<a class="headerlink" href="#kivy" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://kivy.org">Kivy</a> 是一个Python库，该库用于开发多点触控的媒体应用。
+当代码需要重复利用并且可部署时，它能够实现快速简单的交互设计，并且加速成形。</p>
+<p>Kivy使用Python编写，并且基于OpenGL，除此，它支持不同的输入设备，
+例如鼠标、双鼠标、WiiMote、WM_TOUCH、HIDtouch和苹果的产品等等。</p>
+<p>Kivy由社区积极开发，并且免费使用。它适用于所有主要的平台（Linux，OSX, Windows, Android）</p>
+<p>如下是主要的信息资源网站： <a class="reference external" href="http://kivy.org">http://kivy.org</a></p>
+</div>
+<div class="section" id="pyobjc">
+<h2>PyObjC<a class="headerlink" href="#pyobjc" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">仅在OS X中可用。如果您正在写一个跨平台的应用，不要选用这个。</p>
+</div>
+</div>
+<div class="section" id="pyside">
+<h2>PySide<a class="headerlink" href="#pyside" title="Permalink to this headline">¶</a></h2>
+<p>PySide是跨平台的Qt GUI工具包的Python绑定。</p>
+<blockquote>
+<div>pip install pyside</div></blockquote>
+<p><a class="reference external" href="https://wiki.qt.io/Category:LanguageBindings::PySide::Downloads">https://wiki.qt.io/Category:LanguageBindings::PySide::Downloads</a></p>
+</div>
+<div class="section" id="pyqt">
+<h2>PyQt<a class="headerlink" href="#pyqt" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">如果软件不能完全遵循GPL，那么就需要商业许可证。</p>
+</div>
+<p>PyQt提供Qt框架的Python绑定（见如下）</p>
+<p><a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/download">http://www.riverbankcomputing.co.uk/software/pyqt/download</a></p>
+</div>
+<div class="section" id="pyjamasdesktop-pyjs-desktop">
+<h2>PyjamasDesktop (pyjs Desktop)<a class="headerlink" href="#pyjamasdesktop-pyjs-desktop" title="Permalink to this headline">¶</a></h2>
+<p>PyjamasDesktop是Pyjamas的端口。PyjamasDesktop是桌面应用工具集，并且是跨平台框架
+（在发布的v0.6版本之后，PyjamasDesktop是Pyjamas (Pyjs)的一部分）。简而言之，
+它允许完全一样的Python网页应用资源代码能够如独立的桌面应用执行。</p>
+<p><a class="reference external" href="http://wiki.python.org/moin/PyjamasDesktop">PyjamasDesktop的Python维基百科</a>.</p>
+<p>主要的网址: <a class="reference external" href="http://pyjs.org/">pyjs Desktop</a>.</p>
+</div>
+<div class="section" id="qt">
+<h2>Qt<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://qt-project.org/">Qt</a> 是跨平台应用框架，它被广泛用于借GUI开发软件，但是也可用于非GUI应用。</p>
+</div>
+<div class="section" id="toga">
+<h2>Toga<a class="headerlink" href="#toga" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://toga.readthedocs.io/en/latest/">Toga</a> 是一个原生Python和操作系统的
+跨平台GUI工具包。Toga由一个具有共享接口的基础组件库组成，以简化与平台无关的GUI开发。</p>
+<p>Toga适用于Mac OS、Windows、Linux（GTK）以及Android和iOS等移动平台。</p>
+</div>
+<div class="section" id="tk">
+<h2>Tk<a class="headerlink" href="#tk" title="Permalink to this headline">¶</a></h2>
+<p>Tkinter是Tcl/Tk上的面向对象层。 <strong>它的优势是包括Python标准库，能够使编程更加方便，兼容性更强。</strong></p>
+<p>不管是Tk还是Tkinter，在大多数Unix平台，以及Windows和Macintosh系统都可用。
+从8.0发布版本开始，Tk在所有平台上使本身的样式和感觉更赞。</p>
+<p>在 <a class="reference external" href="http://www.tkdocs.com/tutorial/index.html">TkDocs</a> 中有一个非常好的多语言Tk教程，
+所有例子使用Python。更多信息可以看 <a class="reference external" href="http://wiki.python.org/moin/TkInter">Python 维基百科</a>.</p>
+</div>
+<div class="section" id="wxpython">
+<h2>wxPython<a class="headerlink" href="#wxpython" title="Permalink to this headline">¶</a></h2>
+<p>wxPython是Python语言编写的GUI工具包。Python编写人员能够使简单容易地使用健壮，高功能的图形用户接口编程。
+把流行的wxWidgets包在跨平台GUI库中，从而作为Python的扩展模块，这用C++编写。</p>
+<p><strong>安装（稳定版）wxPython可以去如下网址</strong>
+<a class="reference external" href="http://www.wxpython.org/download.php#stable">http://www.wxpython.org/download.php#stable</a> ，并且下载适用于当前操作系统的安装包。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/python-guide-logo.png" title="Python最佳实践指南"/>
+  </a>
+</p>
+
+<p>
+  本指南目前持续不断地更新与完善。这份较为主观的指南旨在为Python初学者和专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
+</p>
+
+<h3>获取更新</h3>
+<p>获得新版本和未来项目的更新。</p>
+
+<p><iframe src="http://ghbtns.com/github-btn.html?user=prodesire&type=follow&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe></p>
+  
+<p><iframe src="http://ghbtns.com/github-btn.html?user=kennethreitz&type=follow&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe></p>
+
+<p><a href="https://twitter.com/kennethreitz" class="twitter-follow-button" data-show-count="false">Follow @kennethreitz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+<p><a href="https://saythanks.io/to/kennethreitz">表示感谢</a></p>
+<p><a href="http://tinyletter.com/kennethreitz">加入邮件列表</a>.</p>
+
+<a href="http://www.datacamp.com/?utm_source=python_guide&utm_campaign=display">
+<img src="../_static/ad.png" alt="">
+</a>
+
+<hr>
+
+<h3>O'Reilly 书籍</h3>
+
+<p>这份指南现在有纸质版啦！</p>
+
+<a href="https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca" target="_blank"><img border="0" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491933178&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=bookforkind-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=bookforkind-20&l=li2&o=1&a=1491933178" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<p>所有的收入都直接捐赠给 <a href="https://djangogirls.org">DjangoGirls</a> 组织。</p>
+
+
+
+<h3>其他项目</h3>
+
+<p>更多 <a href="http://kennethreitz.org/">Kenneth Reitz</a> 项目：</p>
+<ul>
+    <li><a href="http://wsl-guide.org/">wsl-guide.org</a></li>
+    <li><a href="http://edmsynths.com/">edmsynths.com</a></li>
+    <li><a href="http://pipenv.org/">pipenv</a></li>
+    <li><a href="http://pep8.org/">pep8.org</a></li>
+    <li><a href="http://python-requests.org">Requests: HTTP for Humans</a></li>
+    <li><a href="https://github.com/kennethreitz/maya">Maya: Datetimes for Humans</a></li>
+    <li><a href="https://github.com/kennethreitz/records">Records: SQL for Humans</a></li>
+    <li><a href="http://www.git-legit.org">Legit: Git for Humans</a></li>
+    <li><a href="http://docs.python-tablib.org/en/latest/">Tablib: Tabular Datasets</a></li>
+</ul>
+
+<h3>翻译</h3>
+<ul>
+  <li><a href="http://docs.python-guide.org/en/latest/">English</a></li>
+  <li><a href="https://python-guide-fr.readthedocs.io/fr/latest/">French</a></li>
+  <li><a href="https://pythonguidecn.readthedocs.io/zh/latest/">Chinese</a></li>
+  <li><a href="http://python-guideja.readthedocs.io/ja/latest/">Japanese</a></li>
+  <li><a href="https://python-guide-kr.readthedocs.io/ko/latest/">Korean</a></li>
+  <li><a href="http://python-guide-pt-br.readthedocs.io/pt_BR/latest/">Brazilian Portuguese</a></li>
+</ul>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GUI应用</a><ul>
+<li><a class="reference internal" href="#camelot">Camelot</a></li>
+<li><a class="reference internal" href="#cocoa">Cocoa</a></li>
+<li><a class="reference internal" href="#gtk">GTk</a></li>
+<li><a class="reference internal" href="#pygobject-aka-pygi">PyGObject aka (PyGi)</a></li>
+<li><a class="reference internal" href="#kivy">Kivy</a></li>
+<li><a class="reference internal" href="#pyobjc">PyObjC</a></li>
+<li><a class="reference internal" href="#pyside">PySide</a></li>
+<li><a class="reference internal" href="#pyqt">PyQt</a></li>
+<li><a class="reference internal" href="#pyjamasdesktop-pyjs-desktop">PyjamasDesktop (pyjs Desktop)</a></li>
+<li><a class="reference internal" href="#qt">Qt</a></li>
+<li><a class="reference internal" href="#toga">Toga</a></li>
+<li><a class="reference internal" href="#tk">Tk</a></li>
+<li><a class="reference internal" href="#wxpython">wxPython</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="cli.html" title="previous chapter">命令行应用</a></li>
+      <li>Next: <a href="db.html" title="next chapter">数据库</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!-- Alabaster (krTheme++) Hacks -->
+<aside id="python27">
+  Python 3 —— 新的最佳实践, 会继续存在。
+  Python 2 在仅仅 <time></time> 个月后就会退休！
+</aside>
+
+<!-- Python 2 Death Clock™ -->
+<style type="text/css">
+body { margin-top: 4em; }
+#python27 {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    height:  auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: larger;
+    line-height: 3;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script>
+var death = new Date('2020-04-12');
+
+var diff = moment.duration(death - moment());
+
+document.querySelector('#python27 time').innerText = (diff.years() * 12) + diff.months();
+</script>
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '56ca79a64b2ffa7a470027ea');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project. <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>.
+      
+    </div>
+
+    
+    <a href="https://github.com/Prodesire/Python-Guide-CN" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

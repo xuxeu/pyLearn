@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>机器学习 &mdash; The Hitchhiker&#39;s Guide to Python</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="The Hitchhiker&#39;s Guide to Python" href="../index.html" />
+    <link rel="next" title="与C/C++库交互" href="clibs.html" />
+    <link rel="prev" title="密码学" href="crypto.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>机器学习<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<img alt="https://farm4.staticflickr.com/3954/34018729885_002ced9b54_k_d.jpg" src="https://farm4.staticflickr.com/3954/34018729885_002ced9b54_k_d.jpg" />
+<p>Python拥有大量的数据分析、统计和机器学习库，使其成为许多数据科学家的首选语言。</p>
+<p>一些广泛使用的机器学习和其他数据科学应用程序包被列在下面：</p>
+<div class="section" id="scipy-scipy-stack">
+<h2>Scipy 栈（Scipy stack）<a class="headerlink" href="#scipy-scipy-stack" title="Permalink to this headline">¶</a></h2>
+<p>Scipy 栈由数据科学所使用的一组核心帮助包组成，用于统计分析和数据可视化。
+由于其庞大的功能和易用性，scripy栈被认为是大多数数据科学应用的必备条件。</p>
+<p>该栈包含以下包（提供文档链接）：</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://www.numpy.org/">NumPy</a></li>
+<li><a class="reference external" href="https://www.scipy.org/">SciPy library</a></li>
+<li><a class="reference external" href="http://matplotlib.org/">Matplotlib</a></li>
+<li><a class="reference external" href="https://ipython.org/">IPython</a></li>
+<li><a class="reference external" href="http://pandas.pydata.org/">pandas</a></li>
+<li><a class="reference external" href="http://www.sympy.org/en/index.html">Sympy</a></li>
+<li><a class="reference external" href="http://nose.readthedocs.io/en/latest/">nose</a></li>
+</ol>
+<p>该栈还附带了Python，但已被排除在上面的列表中。</p>
+<div class="section" id="id2">
+<h3>安装<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>要安装完整的栈或单个包，您可以参考 <a class="reference external" href="https://www.scipy.org/install.html">这里</a>
+给出的说明。</p>
+<p><strong>注意：</strong> <a class="reference external" href="https://www.continuum.io/anaconda-overview">Anaconda</a> 是高推荐的，
+因为它可以无缝地安装和维护数据科学包。</p>
+</div>
+</div>
+<div class="section" id="scikit-learn">
+<h2>scikit-learn<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">¶</a></h2>
+<p>Scikit是一个用于Python的免费开源机器学习库。 它提供了现成的功能来实现诸如线性回归、
+分类器、SVM、k-均值和神经网络等多种算法。它还有一些可直接用于训练和测试的样本数据集。</p>
+<p>由于其速度、鲁棒性和易用性，它是许多机器学习应用程序中使用最广泛的库之一。</p>
+<div class="section" id="id4">
+<h3>安装<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>通过 PyPI:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+<p>通过 conda:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+<p>scikit-learn 也随Anaconda发行（如上所述）。 有关更多安装说明，请参阅
+<a class="reference external" href="http://scikit-learn.org/stable/install.html">此链接</a> 。</p>
+</div>
+<div class="section" id="id6">
+<h3>例子<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>本例中，我们在 <a class="reference external" href="http://en.wikipedia.org/wiki/Iris_flower_data_set">Iris 数据集</a>
+上训练一个简单的分类器，它与scikit-learn捆绑在一起。</p>
+<p>数据集具有花的四个特征：萼片长度，萼片宽度，花瓣长度和花瓣宽度，并将它们分为三个花种
+（标签）：setosa、versicolor或virginica。 标签已经被表示为数据集中的数字：
+0（setosa），1（versicolor）和2（virginica）。</p>
+<p>我们清洗Iris数据集，并将其分为独立的训练和测试集：保留最后10个数据点进行测试，
+剩余的进行训练。然后我们在训练集训练分类器，并对测试集进行预测。</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1">#loading the iris dataset</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span> <span class="c1">#array of the data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span> <span class="c1">#array of labels (i.e answers) of each data entry</span>
+
+<span class="c1">#getting label names i.e the three flower species</span>
+<span class="n">y_names</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target_names</span>
+
+<span class="c1">#taking random indices to split the dataset into train and test</span>
+<span class="n">test_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1">#splitting data and labels into train and test</span>
+<span class="c1">#keeping last 10 entries for testing, rest for training</span>
+
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">test_ids</span><span class="p">[:</span><span class="o">-</span><span class="mi">10</span><span class="p">]]</span>
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">test_ids</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]]</span>
+
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_ids</span><span class="p">[:</span><span class="o">-</span><span class="mi">10</span><span class="p">]]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_ids</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]]</span>
+
+<span class="c1">#classifying using decision tree</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+
+<span class="c1">#training (fitting) the classifier with the training set</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1">#predictions on the test dataset</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">pred</span> <span class="c1">#predicted labels i.e flower species</span>
+<span class="k">print</span> <span class="n">y_test</span> <span class="c1">#actual labels</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span> <span class="c1">#prediction accuracy</span>
+</pre></div>
+</div>
+<p>由于我们在每次迭代中随机分割和分类训练，所以准确性可能会有所不同。运行上面的代码得到：</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">]</span>
+<span class="mf">100.0</span>
+</pre></div>
+</div>
+<p>第一行包含由我们的分类器预测的测试数据的标签（即花种），第二行包含数据集中给出的实际花种。
+我们这次准确率达到100％。</p>
+<p>关于scikit-learn的更多内容可以在 <a class="reference external" href="http://scikit-learn.org/stable/user_guide.html">文档</a>
+中阅读。</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/python-guide-logo.png" title="Python最佳实践指南"/>
+  </a>
+</p>
+
+<p>
+  本指南目前持续不断地更新与完善。这份较为主观的指南旨在为Python初学者和专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
+</p>
+
+<h3>获取更新</h3>
+<p>获得新版本和未来项目的更新。</p>
+
+<p><iframe src="http://ghbtns.com/github-btn.html?user=prodesire&type=follow&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe></p>
+  
+<p><iframe src="http://ghbtns.com/github-btn.html?user=kennethreitz&type=follow&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe></p>
+
+<p><a href="https://twitter.com/kennethreitz" class="twitter-follow-button" data-show-count="false">Follow @kennethreitz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+<p><a href="https://saythanks.io/to/kennethreitz">表示感谢</a></p>
+<p><a href="http://tinyletter.com/kennethreitz">加入邮件列表</a>.</p>
+
+<a href="http://www.datacamp.com/?utm_source=python_guide&utm_campaign=display">
+<img src="../_static/ad.png" alt="">
+</a>
+
+<hr>
+
+<h3>O'Reilly 书籍</h3>
+
+<p>这份指南现在有纸质版啦！</p>
+
+<a href="https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca" target="_blank"><img border="0" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1491933178&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=bookforkind-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=bookforkind-20&l=li2&o=1&a=1491933178" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<p>所有的收入都直接捐赠给 <a href="https://djangogirls.org">DjangoGirls</a> 组织。</p>
+
+
+
+<h3>其他项目</h3>
+
+<p>更多 <a href="http://kennethreitz.org/">Kenneth Reitz</a> 项目：</p>
+<ul>
+    <li><a href="http://wsl-guide.org/">wsl-guide.org</a></li>
+    <li><a href="http://edmsynths.com/">edmsynths.com</a></li>
+    <li><a href="http://pipenv.org/">pipenv</a></li>
+    <li><a href="http://pep8.org/">pep8.org</a></li>
+    <li><a href="http://python-requests.org">Requests: HTTP for Humans</a></li>
+    <li><a href="https://github.com/kennethreitz/maya">Maya: Datetimes for Humans</a></li>
+    <li><a href="https://github.com/kennethreitz/records">Records: SQL for Humans</a></li>
+    <li><a href="http://www.git-legit.org">Legit: Git for Humans</a></li>
+    <li><a href="http://docs.python-tablib.org/en/latest/">Tablib: Tabular Datasets</a></li>
+</ul>
+
+<h3>翻译</h3>
+<ul>
+  <li><a href="http://docs.python-guide.org/en/latest/">English</a></li>
+  <li><a href="https://python-guide-fr.readthedocs.io/fr/latest/">French</a></li>
+  <li><a href="https://pythonguidecn.readthedocs.io/zh/latest/">Chinese</a></li>
+  <li><a href="http://python-guideja.readthedocs.io/ja/latest/">Japanese</a></li>
+  <li><a href="https://python-guide-kr.readthedocs.io/ko/latest/">Korean</a></li>
+  <li><a href="http://python-guide-pt-br.readthedocs.io/pt_BR/latest/">Brazilian Portuguese</a></li>
+</ul>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">机器学习</a><ul>
+<li><a class="reference internal" href="#scipy-scipy-stack">Scipy 栈（Scipy stack）</a><ul>
+<li><a class="reference internal" href="#id2">安装</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-learn">scikit-learn</a><ul>
+<li><a class="reference internal" href="#id4">安装</a></li>
+<li><a class="reference internal" href="#id6">例子</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="crypto.html" title="previous chapter">密码学</a></li>
+      <li>Next: <a href="clibs.html" title="next chapter">与C/C++库交互</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!-- Alabaster (krTheme++) Hacks -->
+<aside id="python27">
+  Python 3 —— 新的最佳实践, 会继续存在。
+  Python 2 在仅仅 <time></time> 个月后就会退休！
+</aside>
+
+<!-- Python 2 Death Clock™ -->
+<style type="text/css">
+body { margin-top: 4em; }
+#python27 {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    height:  auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: larger;
+    line-height: 3;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script>
+var death = new Date('2020-04-12');
+
+var diff = moment.duration(death - moment());
+
+document.querySelector('#python27 time').innerText = (diff.years() * 12) + diff.months();
+</script>
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '56ca79a64b2ffa7a470027ea');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project. <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>.
+      
+    </div>
+
+    
+    <a href="https://github.com/Prodesire/Python-Guide-CN" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
